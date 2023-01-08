@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_console/pages/home_page.dart';
+import 'package:flutter_console/pages/login_page.dart';
 
 void main() {
   // --> entry point
@@ -12,15 +14,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // build k andar ui ka kaam hota hai
+
     return MaterialApp(
       // return m app deni padti hai .. may be widget app, material app or cupertino app
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("Welcome to learning flutter"),
-          ),
-        ),
-      ),
+      // home: Homepage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      // intitalroute se bhi starting page specify kr skte hai.
+      // initialRoute: "/home",
+      routes: {
+        "/": (context) =>
+            LoginPage(), // slash ka default meaning home page hi hota hai ..isliye upar home wale ko comment kar diya
+        "/home": (context) => Homepage(),
+        "/login": (context) =>
+            LoginPage() // here loginpage is a object , uske aage new bhi laga skte hai
+      },
     );
   }
 }
+
+/*
+num temp = 30.5; // num can take both int and double
+var day = "tuesday"; // var can take any datatype
+const pi = 3.14; // constant value...will never change.
+*/
