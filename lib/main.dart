@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_console/pages/home_page.dart';
 import 'package:flutter_console/pages/login_page.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   // --> entry point
@@ -20,8 +20,9 @@ class MyApp extends StatelessWidget {
       // return m app deni padti hai .. may be widget app, material app or cupertino app
       // home: Homepage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      // primaryTextTheme: GoogleFonts.aBeeZeeTextTheme()),
+      theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.lato().fontFamily),
       darkTheme: ThemeData(brightness: Brightness.dark),
       // intitalroute se bhi starting page specify kr skte hai.
       // initialRoute: "/home",

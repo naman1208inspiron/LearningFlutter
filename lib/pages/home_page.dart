@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Homepage extends StatelessWidget {
   final int days = 30;
   final String name = "naman";
