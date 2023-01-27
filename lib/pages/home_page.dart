@@ -1,12 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_console/models/catalog.dart';
 import 'package:flutter_console/widgets/drawer.dart';
+import 'dart:convert';
 
 import '../widgets/items_widget.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
   final int days = 30;
   final String name = "naman";
+
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() async {
+    final catalogJson =
+        await rootBundle.loadString("assets/files/catalog.json");
+    // return a future ....matlab file extract karne m time lag skta hai --> that's why using await.
+    // print(catalogJson);
+    final decodeData = jsonDecode(catalogJson);
+    // print(decodeData);
+    final productsData = decodeData["products"];
+    // print(productsData);
+  }
+
   @override
   Widget build(BuildContext context) {
     // context is info that which widget lies where
