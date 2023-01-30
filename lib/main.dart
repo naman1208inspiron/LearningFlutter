@@ -3,8 +3,6 @@ import 'package:flutter_console/pages/home_page.dart';
 import 'package:flutter_console/pages/login_page.dart';
 import 'package:flutter_console/util/routes.dart';
 import 'package:flutter_console/widgets/themes.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_console/widgets/themes.dart';
 
 void main() {
   // --> entry point
