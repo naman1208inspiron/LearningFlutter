@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_console/pages/cart_page.dart';
 import 'package:flutter_console/pages/home_page.dart';
 import 'package:flutter_console/pages/login_page.dart';
 import 'package:flutter_console/util/routes.dart';
@@ -30,8 +31,9 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) =>
             const LoginPage(), // slash ka default meaning home page hi hota hai ..isliye upar home wale ko comment kar diya
-        Myroutes.homeRoute: (context) => Homepage(),
-        Myroutes.loginRoute: (context) => const LoginPage()
+        Myroutes.homeRoute: (context) => const Homepage(),
+        Myroutes.loginRoute: (context) => const LoginPage(),
+        Myroutes.cartRoute: (context) => const CartPage()
         // "/home": (context) => Homepage(),
         // "/login": (context) =>
         //     const LoginPage() // here loginpage is a object , uske aage new bhi laga skte hai
