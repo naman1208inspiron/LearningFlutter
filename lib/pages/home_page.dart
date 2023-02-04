@@ -54,10 +54,15 @@ class _HomepageState extends State<Homepage> {
 
     // ignore: prefer_const_constructors
     return Scaffold(
+        backgroundColor: context.canvasColor,
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, Myroutes.cartRoute),
-          backgroundColor: MyTheme.darkBluishColor,
-          child: const Icon(CupertinoIcons.cart_fill),
+          backgroundColor:
+              context.theme.buttonColor, // Theme.of(context).cardColor
+          child: const Icon(
+            CupertinoIcons.cart_fill,
+            color: Colors.white,
+          ),
         ),
         body: SafeArea(
           child: Container(

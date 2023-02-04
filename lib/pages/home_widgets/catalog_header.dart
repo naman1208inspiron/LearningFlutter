@@ -9,7 +9,7 @@ class CatalogHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      "Catalog App".text.xl4.bold.color(MyTheme.darkBluishColor).make(),
+      "Catalog App".text.xl4.bold.color(context.theme.colorScheme.secondary).make(),
       "Treding Products".text.xl2.color(MyTheme.darkBluishColor).make(),
     ]);
   }

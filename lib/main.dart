@@ -23,11 +23,11 @@ class MyApp extends StatelessWidget {
       // return m app deni padti hai .. may be widget app, material app or cupertino app
       // home: Homepage(),
       // debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
-      theme: MyTheme.lightTheme(context),
+      // themeMode: ThemeMode.dark,
+      // theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       // intitalroute se bhi starting page specify kr skte hai.
-      initialRoute: "/home",
+      initialRoute: "/login",
       routes: {
         "/": (context) =>
             const LoginPage(), // slash ka default meaning home page hi hota hai ..isliye upar home wale ko comment kar diya

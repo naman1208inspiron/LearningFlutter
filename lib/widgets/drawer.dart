@@ -6,6 +6,7 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_declarations
     final imgUrl =
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRJ4a9bqc8dtTTjyHgnZ3dwbQvnrR2PNKo1g&usqp=CAU";
 
